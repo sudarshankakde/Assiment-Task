@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ekatta Task Sid!</title>
+</head>
+
+<body >
+    <div id="body">
+        <!-- navbar -->
+        <div class="container-fluid  py-2" id="navbar">
+            <div class="row text-white h5 mt-1">
+                <div class="col-1 mx-auto">
+                    <i class="bi bi-list" onclick="OpenManu()"></i>
+                </div>
+                <div class="col-8 text-start">
+                    <div class="h5" id="NavHeader">Employee Personal Details</div>
+                </div>
+                <div class="col-1 mx-auto">
+                    <i class="fa fa-birthday-cake " onclick="BirthdayCeleration()"></i>
+                </div>
+                <div class="col-1 mx-auto" onclick="ControlOptions()">
+                    <i class="bi bi-three-dots-vertical "></i>
+                    <!-- options -->
+                    <div id="options">
+                        <ul>
+                            <li>
+                                settings
+                            </li>
+                            <li>
+                                Language
+                            </li>
+                            <li>
+                                Terms & Conditions
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- manu card -->
+        <div id="manu">
+            <div class="close">
+                <i class="bi bi-x" onclick="CloseManu()"></i>
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>My Details</li>
+                <li>Messages</li>
+                <li>Holidays</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+
+
+        <!-- Details  -->
+        <div class="container-fluid py-3" id="details">
+            <div class="row">
+                <div class="col-9 text-start">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <td id="Name" class="text-primary">Imran Shaikh</td>
+                        </tr>
+                        <tr>
+                            <th>ID</th>
+                            <td>0022</td>
+                        </tr>
+                        <tr>
+                            <th>Email Id</th>
+                            <td>skimranpatel@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>Department</th>
+                            <td>App & Web Development</td>
+                        </tr>
+                        <tr>
+                            <th>Designation</th>
+                            <td>Employee</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-3 mx-auto">
+                    <div id="uploadImage">
+                        <input type="image" src="add image.png" alt="" class="rounded img-fluid "
+                            id="Pimage" onclick="UploadImage">
+                        <label for="Pimage" class="w-100 ">Upload Profile Image</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Info -->
+        <div class="conatiner text-primary ownCard mt-4">
+            <div class="ownCardLable">
+                Attendance Info
+            </div>
+            <div class="row ">
+                <div class="col-6">
+                    <div class="mx-3 text-left px-sm-5" >
+                        <h5>Count</h5>
+                        <h4>13
+                            <small style="font-size: x-small;">View Details</small>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-6 m-auto">
+                    <div class="bg-primary text-white mx-3 rounded">
+                        Punched at
+                        <br>
+                        10:14:38 AM
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaves -->
+        <div class="conatiner text-primary ownCard mt-4">
+            <div class="ownCardLable px-5">
+                Leaves
+            </div>
+            <div class="row pt-1">
+                <div class="col-3">
+                    <h4>
+                        20
+                    </h4>
+                    <p>Total</p>
+                </div>
+                <div class="col-3">
+                    <h4>
+                        17
+                    </h4>
+                    <p>Applied</p>
+                </div>
+                <div class="col-3 ">
+                    <h4>
+                        3
+                    </h4>
+                    <p>Remaining</p>
+                </div>
+                <div class="col-3 border border-right-0 border-top-0 border-bottom-0 border-dark">
+                    <h4>
+                        0
+                    </h4>
+                    <p>LWP</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- C-off -->
+        <div class="conatiner text-primary ownCard mt-4">
+            <div class="ownCardLable px-5">
+                C-off
+            </div>
+            <div class="row pt-2">
+                <div class="col-12">
+                    <h4>
+                        0
+                    </h4>
+                    <p>Approved</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- btn control group -->
+        <div class="conatienr ">
+            <div class="row mx-auto  text-center">
+                <div class="col-4 "><button class="btn btn-primary" onclick="ApplyLeave()">
+                        Apply Leave
+                    </button></div>
+                <div class="col-4 "><button class="btn btn-primary" onclick="ApllyCoff()">
+                        Apply C-off
+                    </button></div>
+                <div class="col-4 "><button class="btn btn-primary" onclick="MyProject()">
+                        My Project
+                    </button></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
