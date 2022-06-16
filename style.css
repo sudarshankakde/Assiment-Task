@@ -112,3 +112,9 @@ td{
     padding: 1vh 0 ;
 }
 
+/* screen size */
+@media (min-Width:768px) {
+    #body{
+        visibility: hidden;
+    }
+}
